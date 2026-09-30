@@ -68,9 +68,9 @@ class MCPConnection:
                 self._ready, self._stop = asyncio.Event(), asyncio.Event()
                 self._task = asyncio.create_task(self._run())
             try:
-                await asyncio.wait_for(self._ready.wait(), timeout=90)
+                await asyncio.wait_for(self._ready.wait(), timeout=120)
             except asyncio.TimeoutError as exc:
-                raise MCPUnavailable(f"{self.name} MCP server did not start within 90s.") from exc
+                raise MCPUnavailable(f"{self.name} MCP server did not start within 120s.") from exc
             if self._error is not None:
                 err, self._task = self._error, None
                 inner = getattr(err, "exceptions", [err])[0] if hasattr(err, "exceptions") else err
