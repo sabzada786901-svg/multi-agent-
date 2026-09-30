@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.vscode/
+logs/
+data/pdfs/*.pdf
+
+*.log
+gcp-oauth.keys.json
+credentials.json
+tokens.json
+client_secret*.json
+.vscode/

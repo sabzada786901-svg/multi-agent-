@@ -1,0 +1,20 @@
+# Orchestration
+langgraph>=0.6
+langchain-core>=0.3
+# LLM providers (OpenRouter uses the OpenAI-compatible client; NO OpenAI key needed)
+langchain-openai>=0.3
+langchain-groq>=0.3
+# MCP
+langchain-mcp-adapters>=0.1.9
+# RAG
+langchain-text-splitters>=0.3
+qdrant-client>=1.10
+sentence-transformers>=3.0
+pypdf>=4.0
+# Misc
+python-dotenv>=1.0
+pydantic>=2.7
+tzdata            # required for the Asia/Karachi timezone on Windows
+# Tests
+pytest>=8
+pytest-asyncio>=0.23
